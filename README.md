@@ -39,7 +39,7 @@ This project is an AI-powered text summarizer that leverages the power of Huggin
 
 To start the FastAPI server, run the following command:
 `bash
-    uvicorn main:app --reload
+    uvicorn src.main:app --reload
     `
 
 ### Usage
