@@ -45,6 +45,14 @@ To start the FastAPI server, run the following command:
 ### Usage
 
 Once the server is running, you can access the API documentation by navigating to `http://127.0.0.1:8000/docs` in your web browser. This will provide you with an interactive interface to test the summarization endpoint.
+### Running the Streamlit App
+
+To start the Streamlit app, run the following command:
+```bash
+    streamlit run src/streamlit_app.py
+    ```
+
+Once the Streamlit app is running, you can access it by navigating to `http://localhost:8501` in your web browser. This will provide you with a user-friendly interface to input text and receive a summarized version of it.
 
 ### Example Request
 
