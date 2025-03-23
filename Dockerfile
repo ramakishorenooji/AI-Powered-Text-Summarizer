@@ -8,10 +8,11 @@ WORKDIR /app
 COPY . /app
 
 # Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
-# Expose required ports
-EXPOSE 8000 8501
+# Expose the FastAPI port (Render will map it dynamically)
+EXPOSE 8000
 
-# Start both FastAPI and Streamlit using a process manager
-CMD ["sh", "-c", "uvicorn src.main:app --host 0.0.0.0 --port 8000 & streamlit run src/app.py --server.port=8501 --server.address=0.0.0.0"]
+# Start FastAPI (Fixing CMD syntax)
+CMD uvicorn src.main:app --reload
+
