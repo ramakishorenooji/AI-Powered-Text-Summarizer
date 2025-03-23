@@ -8,11 +8,11 @@ WORKDIR /app
 COPY . /app
 
 # Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Expose the FastAPI port (Render will map it dynamically)
 EXPOSE 8000
 
 # Start FastAPI (Fixing CMD syntax)
-CMD uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
+CMD uvicorn src.main:app --reload
 
